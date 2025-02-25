@@ -293,4 +293,40 @@ input[type="range"] {
 
 .input-with-unit select:hover {
     border-color: var(--primary-color);
+}
+
+/* 添加移动端适配样式 */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .image-container {
+    width: 100%;
+    margin: 10px 0;
+    min-height: 200px; /* 设置最小高度 */
+  }
+
+  .image-box {
+    height: 200px;
+    margin-bottom: 10px;
+  }
+
+  .controls {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* 确保图片容器保持合适的比例 */
+.image-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 } 
